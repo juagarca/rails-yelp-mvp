@@ -1,1 +1,21 @@
-Show
+<div class="menu">
+  <p><%= link_to 'Add a new review', new_restaurant_review_path(@restaurant.id) %></p>
+</div>
+
+<div class="container text-center">
+  <div class="title border-bottom">
+    <h1><%= @restaurant.name %></h1>
+  </div>
+  <p><%= @restaurant.address %></p>
+  <p><%= @restaurant.phone_number %></p>
+  <p><%= @restaurant.category %></p>
+
+  <div class="reviews border">
+    <% @restaurant.reviews.each do |r| %>
+      <p><%= '⭐️' * r.rating %> <%= r.content %></p>
+    <% end %>
+  </div>
+
+
+  <h1><%= link_to '🔙', restaurants_path %></h1>
+</div>
