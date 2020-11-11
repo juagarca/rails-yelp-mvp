@@ -12,6 +12,7 @@
     <p><%= '⭐️' * r.rating %> <%= r.content %></p>
   <% end %>
 </div>
-<h3><%= link_to 'Add a new review', new_restaurant_review_path(params[:id]) %></h3>
+<br>
+<h3><%= link_to 'Add a new review', new_restaurant_review_path(params[:id]), class: "btn btn-primary"%></h3>
 <h3><%= link_to '🔙', restaurants_path %></h1>
 
