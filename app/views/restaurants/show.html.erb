@@ -13,6 +13,15 @@
   <% end %>
 </div>
 <br>
-<h3><%= link_to 'Add a new review', new_restaurant_review_path(params[:id]), class: "btn btn-primary"%></h3>
+
+<h2>Add a review</h2>
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :rating , collection: [1, 2, 3, 4, 5] %>
+  <%= f.input :content %>
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>
+
+<br>
+
 <h3><%= link_to '🔙', restaurants_path %></h1>
 
