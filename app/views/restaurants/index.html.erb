@@ -1,11 +1,5 @@
-<div class="menu">
-  <p><%= link_to 'Add a new restaurant', new_restaurant_path %></p>
-</div>
-
-<div class="container text-center">
-  <% @restaurants.each do |r| %>
-    <h2><%= link_to r.name, restaurant_path(r.id) %></h2><br>
-    <p><%= r.address %> | <%= r.phone_number %> | <%= r.category %></p>
-  <% end %>
-</div>
+<% @restaurants.each do |r| %>
+  <h2><%= link_to r.name, restaurant_path(r.id) %></h2><br>
+  <p><%= r.address %> | <%= r.phone_number %> | <%= r.category %></p>
+<% end %>
 
