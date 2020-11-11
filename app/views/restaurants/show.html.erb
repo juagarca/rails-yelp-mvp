@@ -14,12 +14,7 @@
 </div>
 <br>
 
-<h2>Add a review</h2>
-<%= simple_form_for [@restaurant, @review] do |f| %>
-  <%= f.input :rating , collection: [1, 2, 3, 4, 5] %>
-  <%= f.input :content %>
-  <%= f.submit class: "btn btn-primary"%>
-<% end %>
+<%= render "reviews/form", review: @review , restaurant: @restaurant%>
 
 <br>
 
